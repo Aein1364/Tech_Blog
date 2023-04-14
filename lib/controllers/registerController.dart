@@ -12,13 +12,13 @@ import 'package:new_tec/components/storageConst.dart';
 import 'package:new_tec/gen/fonts.gen.dart';
 import 'package:new_tec/services/dioService.dart';
 
-import 'package:new_tec/view/articleListScreen.dart';
+import 'package:new_tec/view/articleScreens/articleListScreen.dart';
 import 'package:new_tec/view/emptyStateArticleManagementScreen.dart';
 import 'package:new_tec/view/mainScreen.dart';
 import 'package:new_tec/view/registerScreen.dart';
 
 import '../gen/assets.gen.dart';
-import 'articleListPublisheByMeController.dart';
+import 'articleController/articleListPublisheByMeController.dart';
 
 ArticleListPublishedByMeController articleListPublishedByMeController =
     Get.put(ArticleListPublishedByMeController());

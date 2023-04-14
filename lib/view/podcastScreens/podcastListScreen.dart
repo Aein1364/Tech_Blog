@@ -5,12 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_tec/components/myColors.dart';
 import 'package:new_tec/components/myComponents.dart';
-import 'package:new_tec/controllers/podcastListController.dart';
-
 import 'package:new_tec/view/mainScreen.dart';
-import 'package:new_tec/view/podcastInfoScreen.dart';
+import 'package:new_tec/view/podcastScreens/podcastInfoScreen.dart';
 
-import '../controllers/podcastInfoFileController.dart';
+import '../../controllers/podcastController/podcastInfoFileController.dart';
+import '../../controllers/podcastController/podcastListController.dart';
 
 class PodcastListScreen extends StatelessWidget {
   const PodcastListScreen({super.key});

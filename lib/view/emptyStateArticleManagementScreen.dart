@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_tec/components/myComponents.dart';
-import 'package:new_tec/view/writeArticleScreen.dart';
+import 'package:new_tec/view/articleScreens/writeArticleScreen.dart';
 
 import '../gen/assets.gen.dart';
 

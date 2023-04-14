@@ -5,7 +5,7 @@ import 'package:new_tec/models/articleModel/articleInfoModel.dart';
 import 'package:new_tec/models/articleModel/articleTagModel.dart';
 import 'package:new_tec/services/dioService.dart';
 
-import '../components/apiComponent.dart';
+import '../../components/apiComponent.dart';
 
 class ArticleInfoController extends GetxController {
   Rx<ArticleInfoModel> articleInfo = ArticleInfoModel().obs;

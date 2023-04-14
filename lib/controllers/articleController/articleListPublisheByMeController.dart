@@ -3,9 +3,8 @@
 import 'package:get/get.dart';
 import 'package:new_tec/models/articleModel/articleListModel.dart';
 
-import '../components/apiComponent.dart';
-
-import '../services/dioService.dart';
+import '../../components/apiComponent.dart';
+import '../../services/dioService.dart';
 
 class ArticleListPublishedByMeController extends GetxController {
   RxList<ArticleListModel> articleList = RxList();

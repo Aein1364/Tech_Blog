@@ -5,11 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_tec/components/myColors.dart';
 import 'package:new_tec/components/myComponents.dart';
-import 'package:new_tec/controllers/podcastInfoFileController.dart';
-import 'package:new_tec/controllers/podcastListController.dart';
-import 'package:new_tec/view/podcastListScreen.dart';
 
-import '../gen/assets.gen.dart';
+import '../../controllers/podcastController/podcastInfoFileController.dart';
+import '../../controllers/podcastController/podcastListController.dart';
+import '../../gen/assets.gen.dart';
 
 class PodcastInfoScreen extends StatelessWidget {
   PodcastInfoScreen({super.key});
@@ -65,7 +64,7 @@ class PodcastInfoScreen extends StatelessWidget {
 
                                       podcastInfoFileController
                                           .selectedIndex.value = 0;
-                                      Get.off(() => const PodcastListScreen());
+                                      Get.back();
                                     },
                                     child: const Icon(
                                       Icons.arrow_back_rounded,

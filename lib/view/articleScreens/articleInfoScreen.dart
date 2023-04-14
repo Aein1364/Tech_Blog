@@ -5,13 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_tec/components/myColors.dart';
 import 'package:new_tec/components/myStrings.dart';
-import 'package:new_tec/controllers/articleInfoController.dart';
-import 'package:new_tec/controllers/articleListController.dart';
-import 'package:new_tec/view/articleListScreen.dart';
 
-import '../components/myComponents.dart';
-import '../controllers/homeItemsController.dart';
-import '../gen/assets.gen.dart';
+import 'package:new_tec/view/articleScreens/articleListScreen.dart';
+
+import '../../components/myComponents.dart';
+import '../../controllers/articleController/articleInfoController.dart';
+import '../../controllers/articleController/articleListController.dart';
+import '../../controllers/homeItemsController.dart';
+import '../../gen/assets.gen.dart';
 
 class ArticleInfoScreen extends StatelessWidget {
   ArticleInfoScreen({super.key});

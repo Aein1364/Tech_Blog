@@ -11,11 +11,11 @@ import 'package:new_tec/components/myComponents.dart';
 import 'package:new_tec/components/myStrings.dart';
 import 'package:new_tec/controllers/homeItemsController.dart';
 import 'package:new_tec/services/filePicker.dart';
-import 'package:new_tec/view/htmlScreen.dart';
+import 'package:new_tec/view/articleScreens/htmlScreen.dart';
 import 'package:new_tec/view/mainScreen.dart';
 
-import '../controllers/writeArticleController.dart';
-import '../gen/assets.gen.dart';
+import '../../controllers/writeArticleController.dart';
+import '../../gen/assets.gen.dart';
 
 class WriteArticleScreen extends StatelessWidget {
   WriteArticleScreen({super.key});

@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:new_tec/components/myComponents.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 
-import '../controllers/writeArticleController.dart';
+import '../../controllers/writeArticleController.dart';
 
 // ignore: must_be_immutable
 class HtmlScreen extends StatelessWidget {

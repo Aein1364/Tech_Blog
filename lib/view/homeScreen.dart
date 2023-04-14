@@ -2,15 +2,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:new_tec/controllers/articleInfoController.dart';
-import 'package:new_tec/controllers/articleListController.dart';
-import 'package:new_tec/view/articleInfoScreen.dart';
-import 'package:new_tec/view/articleListScreen.dart';
-import 'package:new_tec/view/podcastListScreen.dart';
+import 'package:new_tec/controllers/podcastController/podcastInfoFileController.dart';
+import 'package:new_tec/controllers/podcastController/podcastListController.dart';
+import 'package:new_tec/view/articleScreens/articleInfoScreen.dart';
+import 'package:new_tec/view/articleScreens/articleListScreen.dart';
+import 'package:new_tec/view/podcastScreens/podcastInfoScreen.dart';
+import 'package:new_tec/view/podcastScreens/podcastListScreen.dart';
 
 import '../components/myColors.dart';
 import '../components/myComponents.dart';
 import '../components/myStrings.dart';
+import '../controllers/articleController/articleInfoController.dart';
+import '../controllers/articleController/articleListController.dart';
 import '../controllers/homeItemsController.dart';
 import '../gen/assets.gen.dart';
 
@@ -146,7 +149,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 class TopPodcastList extends StatelessWidget {
-  const TopPodcastList({
+  TopPodcastList({
     super.key,
     required this.homeItemsController,
     required this.textTheme,
@@ -154,7 +157,10 @@ class TopPodcastList extends StatelessWidget {
 
   final HomeItemsController homeItemsController;
   final TextTheme textTheme;
-
+  PodcastInfoFileController podcastInfoFileController =
+      Get.put(PodcastInfoFileController());
+  PodcastListController podcastListController =
+      Get.put(PodcastListController());
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -175,27 +181,35 @@ class TopPodcastList extends StatelessWidget {
                       ? Get.width * .075
                       : 10,
                 ),
-                child: Column(
-                  children: [
-                    MyContainerWithImage(
-                        url: homeItemsController.homeTopPodcast[index].poster,
-                        width: Get.width / 3.3,
-                        height: Get.width / 3.3,
-                        borderRadius: 20,
-                        hasGradient: false,
-                        gradientColors: GradientColors.bestArticleBg,
-                        beginGradientAlignment: Alignment.bottomLeft,
-                        endGradientAlignment: Alignment.bottomCenter),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Expanded(
-                      child: Text(
-                        homeItemsController.homeTopPodcast[index].title,
-                        style: textTheme.titleMedium,
+                child: GestureDetector(
+                  onTap: () {
+                    podcastListController.getPodcastList();
+                    podcastInfoFileController.getPodcastInfoFileList(
+                        id: podcastListController.podcastList[index].id);
+                    Get.to(() => PodcastInfoScreen(), arguments: index);
+                  },
+                  child: Column(
+                    children: [
+                      MyContainerWithImage(
+                          url: homeItemsController.homeTopPodcast[index].poster,
+                          width: Get.width / 3.3,
+                          height: Get.width / 3.3,
+                          borderRadius: 20,
+                          hasGradient: false,
+                          gradientColors: GradientColors.bestArticleBg,
+                          beginGradientAlignment: Alignment.bottomLeft,
+                          endGradientAlignment: Alignment.bottomCenter),
+                      const SizedBox(
+                        height: 15,
                       ),
-                    )
-                  ],
+                      Expanded(
+                        child: Text(
+                          homeItemsController.homeTopPodcast[index].title,
+                          style: textTheme.titleMedium,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               );
             }),

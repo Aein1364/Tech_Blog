@@ -1,10 +1,10 @@
 // ignore_for_file: file_names
 
 import 'package:get/get.dart';
-import 'package:new_tec/models/podcastListModel.dart';
+import 'package:new_tec/models/podcastModels/podcastListModel.dart';
 
-import '../components/apiComponent.dart';
-import '../services/dioService.dart';
+import '../../components/apiComponent.dart';
+import '../../services/dioService.dart';
 
 class PodcastListController extends GetxController {
   RxList<PodcastListModel> podcastList = RxList();

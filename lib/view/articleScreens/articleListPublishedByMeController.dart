@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:new_tec/components/myColors.dart';
 import 'package:new_tec/components/myComponents.dart';
 
-import 'package:new_tec/controllers/articleListPublisheByMeController.dart';
+import '../../controllers/articleController/articleListPublisheByMeController.dart';
 
 class ArticleListPublisheByMeScreen extends StatelessWidget {
   ArticleListPublisheByMeScreen({super.key});

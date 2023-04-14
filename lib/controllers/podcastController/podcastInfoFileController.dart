@@ -6,9 +6,9 @@ import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 
-import '../components/apiComponent.dart';
-import '../models/podcastInfoFileModel.dart';
-import '../services/dioService.dart';
+import '../../components/apiComponent.dart';
+import '../../models/podcastModels/podcastInfoFileModel.dart';
+import '../../services/dioService.dart';
 
 class PodcastInfoFileController extends GetxController {
   RxList<PodcastInfoFileModel> podcastInfoFileList = RxList();
