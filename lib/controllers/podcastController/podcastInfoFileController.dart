@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -76,7 +77,7 @@ class PodcastInfoFileController extends GetxController {
         progressState.value = player.position;
 
         bufferState.value = player.bufferedPosition;
-        log(progressState.value.toString());
+        debugPrint('TIMER :: ${progressState.value}');
       }
     });
   }
