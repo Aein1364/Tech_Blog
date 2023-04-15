@@ -182,8 +182,8 @@ class TopPodcastList extends StatelessWidget {
                       : 10,
                 ),
                 child: GestureDetector(
-                  onTap: () {
-                    podcastListController.getPodcastList();
+                  onTap: () async {
+                    await podcastListController.getPodcastList();
                     podcastInfoFileController.getPodcastInfoFileList(
                         id: podcastListController.podcastList[index].id);
                     Get.to(() => PodcastInfoScreen(), arguments: index);
