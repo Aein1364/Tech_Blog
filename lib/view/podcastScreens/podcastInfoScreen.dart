@@ -61,7 +61,6 @@ class PodcastInfoScreen extends StatelessWidget {
                                           false;
                                       podcastInfoFileController.progressState
                                           .value = const Duration(seconds: 0);
-
                                       podcastInfoFileController
                                           .selectedIndex.value = 0;
                                       Get.back();

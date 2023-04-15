@@ -77,7 +77,7 @@ class PodcastInfoFileController extends GetxController {
         progressState.value = player.position;
 
         bufferState.value = player.bufferedPosition;
-        debugPrint('TIMER :: ${progressState.value}');
+        log(progressState.value.toString());
       }
     });
   }
