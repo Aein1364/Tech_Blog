@@ -15,6 +15,7 @@ import 'package:new_tec/services/dioService.dart';
 import 'package:new_tec/view/articleScreens/articleListScreen.dart';
 import 'package:new_tec/view/emptyStateArticleManagementScreen.dart';
 import 'package:new_tec/view/mainScreen.dart';
+import 'package:new_tec/view/podcastScreens/emptyStatePodcastManagementScreen.dart';
 import 'package:new_tec/view/registerScreen.dart';
 
 import '../gen/assets.gen.dart';
@@ -163,44 +164,50 @@ class RegisterController extends GetxController {
                             Get.to(() => ArticleListScreen());
                           }
                         },
-                        child: GestureDetector(
-                          child: SizedBox(
-                            child: Row(
-                              children: [
-                                Assets.img.icons.articleEditing
-                                    .image(width: 40, height: 40),
-                                const SizedBox(
-                                  width: 10,
+                        child: SizedBox(
+                          child: Row(
+                            children: [
+                              Assets.img.icons.articleEditing
+                                  .image(width: 40, height: 40),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                MyStrings.articleManagement,
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontFamily: FontFamily.dana,
+                                  fontWeight: FontWeight.w400,
                                 ),
-                                const Text(
-                                  MyStrings.articleManagement,
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontFamily: FontFamily.dana,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                )
-                              ],
-                            ),
+                              )
+                            ],
                           ),
                         ),
                       ),
-                      Row(
-                        children: [
-                          Assets.img.icons.podcastMicrophone
-                              .image(width: 40, height: 40),
-                          const SizedBox(
-                            width: 10,
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(
+                              () => const EmptyStatePodcastManagementScreen());
+                        },
+                        child: SizedBox(
+                          child: Row(
+                            children: [
+                              Assets.img.icons.podcastMicrophone
+                                  .image(width: 40, height: 40),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                MyStrings.podcastsManagement,
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontFamily: FontFamily.dana,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              )
+                            ],
                           ),
-                          const Text(
-                            MyStrings.podcastsManagement,
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontFamily: FontFamily.dana,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          )
-                        ],
+                        ),
                       ),
                     ],
                   )

@@ -16,3 +16,11 @@ Future pickFile() async {
     debugPrint('no file picked');
   }
 }
+
+Future pickPodcastFile() async {
+  FilePickerResult? result =
+      await FilePicker.platform.pickFiles(type: FileType.audio);
+  if (result != null) {
+    filePickerController.podcastFile.value = result.files.first;
+  }
+}

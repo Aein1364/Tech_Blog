@@ -18,6 +18,8 @@ class MyStrings {
   static const String articleManagement = 'مدیریت مقاله ها';
   static const String podcastsManagement = 'مدیریت پادکست ها';
   static const String articleEditing = 'ویرایش عنوان مقاله';
+  static const String podcastEditing = 'ویرایش عنوان پادکست';
+  static const String addFile = 'اضافه کردن فایل';
   static const String imageProfileEditing = 'ویرایش عکس پروفایل';
   static const String submitPodcasts = 'ارسال پادکست';
   static const String submitArticle = 'ارسال مقاله';

@@ -53,6 +53,7 @@ dependencies:
   cached_network_image: ^3.2.3
   audio_video_progress_bar: ^1.0.1
   just_audio: ^0.9.32
+  numberpicker: ^2.1.2
 
 dev_dependencies:
   build_runner:

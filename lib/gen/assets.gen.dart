@@ -70,6 +70,10 @@ class $AssetsImgGen {
 class $AssetsImgIconsGen {
   const $AssetsImgIconsGen();
 
+  /// File path: assets/img/icons/addfile.png
+  AssetGenImage get addfile =>
+      const AssetGenImage('assets/img/icons/addfile.png');
+
   /// File path: assets/img/icons/article editing.png
   AssetGenImage get articleEditing =>
       const AssetGenImage('assets/img/icons/article editing.png');
@@ -107,6 +111,7 @@ class $AssetsImgIconsGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        addfile,
         articleEditing,
         authorImage,
         edit,

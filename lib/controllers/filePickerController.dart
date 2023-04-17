@@ -10,4 +10,6 @@ class FilePickerController extends GetxController {
 // name.value='nothing';
 //  }
   Rx<PlatformFile> file = PlatformFile(name: 'nothing', size: 0).obs;
+
+  Rx<PlatformFile> podcastFile = PlatformFile(name: 'nothing', size: 0).obs;
 }
